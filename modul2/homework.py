@@ -1,0 +1,5 @@
+print((True and True) or (False and False))
+firstTimeFormat=input('Insert the first time in the format hh:mm:ss:')
+print('The first time in the format hh:mm:ss is:',firstTimeFormat)
+secondTimeFormat=input('Insert the second time in the format hh:mm:ss:')
+print('Second time in the format hh:mm:ss is:', secondTimeFormat)
