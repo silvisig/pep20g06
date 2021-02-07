@@ -34,7 +34,7 @@ class CarFactory:
     def right_side_driving(self) -> list:
         list_right_side = []
         for i in self.serial_l:
-            if i % 2 != 0:
+            if i % 2 != 1:
                 list_right_side.append(i)
         return list_right_side
 
