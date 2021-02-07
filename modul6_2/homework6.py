@@ -41,7 +41,7 @@ class CarFactory:
     def left_side_driving(self):
         list_left_side = []
         for i in self.serial_l:
-            if i % 2 != 0:
+            if i % 2 != 1:
                 list_left_side.append(i)
         return list_left_side
 
@@ -56,7 +56,7 @@ print("driving on the right: ", cars.right_side_driving())
 print("driving on the left: ", cars.left_side_driving())
 
 
-f = open("homework6t.txt", "x")
+f = open("homework6.txt", "x")
 for i in cars:
     f.write(str(i))
     f.write("\n")

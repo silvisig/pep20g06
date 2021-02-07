@@ -20,13 +20,14 @@ class Triangle():
         self.__setattr__(angle, self.__getattribute__(angle)+degrees)
         if (degrees < 0) or  (var>180):
             raise AngleToBig
-        return var
+
         self.C = (self.A ** 2 + self.B ** 2 - 2 * self.A * self.B * cos(self.angle)) ** (1 / 2)
         if (self.angle + self.BC + self.CA) <= 180:
             self.BC = degrees(acos((self.B ** 2 + self.C ** 2 - self.A ** 2) / (2 * self.B * self.C)))
             self.CA = degrees(acos((self.C ** 2 + self.A ** 2 - self.B ** 2) / (2 * self.C * self.A)))
         print("Self angle=AB= ", self.angle, "Recalculated BC angle: ", self.BC, "Recalculated CA angle: ", self.CA,
               sep='\n')
+        return var
     def modify_side(self,side ,metters):
         var1= self.__getattribute__(side)
         self.__setattr__(side,self.__getattribute__(side)+metters)
