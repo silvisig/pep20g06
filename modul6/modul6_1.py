@@ -151,15 +151,29 @@ print('dog barks:', dog.bark)
 dog.method_2()
 
 
-class Animal(object):  # animal e o super clasa
-    def __init__(self, species):
+class Food(object):  # animal e o super clasa
+    def __init__(self, species=None, foodprep=None):
         self.species = species
+        self.foodprep=foodprep
 
-    def hunt(self):
+    def veggies(self):
         print('nimic')
 
 
-class Wolf(Animal):
+class Spanac(Food):
+    greenvegies = True
+
+    def __init__(self, species):
+        super().__init__(species)
+
+        self.attribute = 'vegies'
+
+    def soup(self):
+        print("supa de spanac")
+
+
+
+class Verdeturi(Spanac):
     bark = True
 
     def __init__(self, species):
@@ -167,32 +181,11 @@ class Wolf(Animal):
 
         self.attribute = 'wild'
 
-    def hunt(self):
-        print("hunting")
+    def has_more_green(self):
+        print('adaugam verdeturi')
 
-    #       raise NotImplemented
-    def method_1(self):
-        pass
-
-
-class Coyote(Animal):
-    bark = True
-
-    def __init__(self, species):
-        super().__init__(species)
-
-        self.attribute = 'wild'
-
-    def has_more_teeth(self):
-        print('adaugam dintii')
-
-    def hunt(self):
-        print("hunting+")
-
-    # raise NotImplemented
-
-    def method_1(self):
-        pass
+class Mealprep:#
+    def __init__(self):
 
 class Car():
 
